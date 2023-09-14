@@ -1,0 +1,204 @@
+:root {
+
+	--fondo: #181818;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.video-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/cyclops.jpg);
+	background-position: center center;
+	background-size: 100%;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.video-principal .contenedor {
+ 	margin: 25px;
+	margin-bottom: 6.25em;
+}
+
+.video-principal .titulo {
+	font-weight: 600;
+	font-size: 2.50em;
+	margin-bottom: 0.4em;
+}
+
+.video-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+	margin: 5px;
+}
+
+.video-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.video-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.video-principal .boton i {
+	margin-right: 1.25em;
+}
+
+
+/*---------Footer---------*/
+
+footer {
+    background-color: 181818;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content img {
+    width: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: 40px;
+  }
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+
+/*Teléfonos móviles en posición vertical*/
+@media screen and (max-width: 600px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.video-principal {
+		font-size: 8px;
+	}
+
+	.video-principal .descripcion {
+		max-width: 100%;
+	}
+}
+
+
+/*Teléfonos móviles en posición horizontal*/
+@media screen   and (min-width: 600px) and (max-width: 959px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor { 
+		flex-direction: column;
+		text-align: center;	
+	}
+
+	.video-principal {
+		font-size: 8px;
+	}
+
+	.video-principal .descripcion {
+		max-width: 100%;
+		font-size: 12px;
+	}
+
+	
+}
+
+
+/*Tablets en posición vertical: entre 768 y 1023 píxeles de ancho*/
+@media screen   and (min-width: 768px) and (max-width: 1023px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor { 
+		flex-direction: column;
+		text-align: center;	
+	}
+
+	
+
+	.video-principal {
+		font-size: 10px;
+	}
+
+	.video-principal .descripcion {
+		max-width: 100%;
+		font-size: 14px;
+	
+	}
+
+	
+}
